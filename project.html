@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matcha</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #fcfff1;
+    }
+
+    div {
+      border: 1px solid black;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    nav {
+      background-color: #6A7B32;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav img {
+      margin-right: 100px;
+      width: 100px;
+      height: auto;
+    }
+
+    nav a {
+      font-size: 20px;
+      color: rgb(205, 255, 188);
+      text-decoration: none;
+      margin-right: 50px;
+    }
+
+    nav a:hover {
+      color: white
+    }
+
+    #home {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .card {
+      color: white;
+      padding: 15px;
+      background-color: rgb(61, 83, 47);
+      width: 300px;
+      height: 150px;
+      border-radius: 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .home-main img {
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .a-card {
+      background-color: #fcfff1;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      margin-top: 20px;
+      justify-content: space-around;
+      align-items: center;
+    }
+
+    h4 {
+      margin: 2px;
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="logo"><img src="lm.png"></div>
+    <div>
+      <a href="#home">Home</a>
+      <a href="#about">About the drink</a>
+      <a href="#">Benefits</a>
+      <a href="#">Where to buy</a>
+    </div>
+  </nav>
+  <div id="home">
+    <div class="home-main">
+      <div class="text">
+        <h2>Matcha</h2>
+        <p></p>
+      </div>
+      <img src="phoroma.jpg">
+
+    </div>
+  </div>
+  <div id="about">
+    <div class="a-card">
+      <h2>Польза матчи</h2>
+      <div class="card">
+        <h4>1. Мощный источник антиоксидантов</h4>
+        <p>Матча содержит в разы больше антиоксидантов, чем обычный зелёный чай. Катехины защищают клетки, замедляют
+          процессы старения и поддерживают общее здоровье организма.</p>
+      </div>
+      <div class="card">
+        <h4>2. Чистая и стабильная энергия</h4>
+        <p>Сочетание кофеина и L-теанина даёт мягкое, ровное бодрящее действие — без резких скачков, как после кофе.
+          Вы остаётесь сосредоточенными и спокойными одновременно.</p>
+      </div>
+      <div class="card">
+        <h4>3. Поддержка метаболизма</h4>
+        <p>Матча помогает ускорить обмен веществ, улучшает превращение энергии и может способствовать более
+          эффективному сжиганию калорий.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
