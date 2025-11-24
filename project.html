@@ -4,133 +4,606 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Matcha</title>
+  <title>Document</title>
   <style>
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background-color: #fcfff1;
-    }
-
-    div {
-      border: 1px solid black;
-    }
-
     * {
       margin: 0;
       padding: 0;
     }
 
-    nav {
-      background-color: #6A7B32;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+    body {
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
     }
 
-    nav img {
-      margin-right: 100px;
-      width: 100px;
-      height: auto;
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      background-color: rgba(55, 72, 38);
+      /* border-radius: 0 0 10px 10px; */
     }
+
+    /* div,
+    nav {
+      border: 2px solid black;
+    } */
 
     nav a {
-      font-size: 20px;
-      color: rgb(205, 255, 188);
+      color: #fffacd;
+      width: 100%;
+      height: fit-content;
+      box-sizing: border-box;
       text-decoration: none;
-      margin-right: 50px;
+      font-size: 20px;
+      padding: 20px;
+      margin-right: 30px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
     }
 
-    nav a:hover {
-      color: white
+    .iteams {
+      display: flex;
+      justify-content: space-between;
     }
 
-    #home {
-      height: 100vh;
+    .but-n {
+      color: rgb(63, 91, 68);
+      font-weight: bold;
+      font-size: 17px;
+      padding: 15px;
+      background-color: rgb(255, 255, 255);
+      border: none;
+      border-radius: 15px;
+    }
+
+    a:hover {
+      color: rgb(184, 207, 189);
+    }
+
+    .but-n:hover {
+      background-color: rgb(221, 223, 221);
+    }
+
+    .logo {
+      font-size: 32px;
+      font-weight: bold;
+      color: #fffacd;
+      width: fit-content;
+      font-size: 32px;
+      font-weight: 600px;
+      padding: 15px;
+    }
+
+    .center {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      justify-content: center;
+      padding-top: 30px;
+      gap: 20px;
+      height: 80vh;
+    }
+
+    .center img {
+      border-radius: 20px;
+      width: 800px;
+      height: 560px;
+    }
+
+    .center-text {
+      margin-left: 2%;
+      padding-top: 90px;
+      color: rgb(19, 16, 16);
+      font-size: 24px;
+    }
+
+    h1 {
+      display: flex;
+      align-content: flex-start;
+      justify-content: flex-start;
+      font-size: 50px;
+      font-weight: 600;
+    }
+
+    .center-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 20px;
+      padding-top: 50px;
+    }
+
+    .card-center {
+      background-color: rgb(241, 241, 241);
+      border: 1px rgb(0, 0, 0);
+      box-shadow: 5px 3px 5px rgba(126, 126, 126, 0.4);
+      border-radius: 10px;
+      width: 180px;
+      height: 100px;
+    }
+
+    .card-center:hover {
+      background-color: rgb(228, 228, 228);
+    }
+
+    .сenter-card-text {
       display: flex;
       justify-content: center;
       align-items: center;
-    }
-
-    .card {
-      color: white;
-      padding: 15px;
-      background-color: rgb(61, 83, 47);
-      width: 300px;
-      height: 150px;
-      border-radius: 12px;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      display: flex;
       flex-direction: column;
+      padding-top: 10px;
+      font-size: 15px;
+      gap: 10px;
     }
 
-    .home-main img {
-      border-radius: 12px;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+    .h2 {
+      padding: 4px;
+    }
+
+    .about-text {
+      display: flex;
+      justify-content: center;
+    }
+
+    .h1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-top: 30px;
+      font-size: 40px;
+      padding-bottom: 20px;
+    }
+
+    h3 {
+      color: rgba(55, 72, 38);
+    }
+
+    .back {
+      background-color: rgb(245, 245, 245);
+      border-radius: 20px;
+      margin: 15px;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 1fr 0.5fr 1fr;
+      justify-content: center;
+
+    }
+
+    .img-content {
+      width: 400px;
+      height: 80vh;
     }
 
     .text {
       display: flex;
       justify-content: center;
-      align-items: center;
+      padding: 5px;
+      flex-direction: column;
+      gap: 30px;
     }
 
-    .a-card {
-      background-color: #fcfff1;
+    .text-style {
+      padding: 20px;
+    }
+
+    .second-slide {
+      margin: 20px auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+      justify-content: center;
+      align-items: center;
+      width: 600px;
+      gap: 20px;
+      border-radius: 20px;
+      background-color: rgb(249, 249, 249);
+
+    }
+
+    .second-img {
+      width: 100%;
+      height: 100px;
+
+    }
+
+    .text-sec {
       display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      margin-top: 20px;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
+      flex-direction: column;
+      padding-bottom: 50px;
     }
 
-    h4 {
-      margin: 2px;
+    .buy {
+      display: grid;
+      grid-template-columns: repeat(3, auto);
+      grid-template-rows: repeat(2, 1fr);
+      justify-content: space-around;
+
+      gap: 30px;
+    }
+
+    .buy-card {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 20px;
+      width: 320px;
+      background-color: rgb(110, 134, 73);
+      border-radius: 40px 0px 40px 0px;
+    }
+
+    .b-text {
+      width: 100%;
+      padding: 15px;
+      text-align: left;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      color: white;
+      font-size: 25px;
+    }
+
+    .b-img {
+      width: 300px;
+      height: 310px;
+      border-radius: 20px 0px 20px 0px;
+    }
+
+    .bb {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px;
+      /* border: 2px solid rgb(130, 152, 139); */
+      border-radius: 10px;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      background-color: rgb(85, 101, 60);
+      font-weight: 600;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      color: white;
+      bottom: 10px;
+    }
+
+    .buy-end-container {
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+
+    .bb-end {
+      padding: 15px 25px;
+      background-color: rgb(130, 149, 100);
+      color: white;
+      font-weight: 600;
+      font-size: 15px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      text-align: center;
+      width: 150px;
+      margin-bottom: 20px;
+    }
+
+    .p-op {
+      padding-top: 10px;
+      font-size: 15px;
+      opacity: 0.7;
+    }
+
+    .bb:hover {
+      background-color: rgb(73, 97, 47);
+    }
+
+    .bb-end:hover {
+      background-color: rgb(73, 97, 47);
+    }
+
+    hr {
+      border: none;
+      height: 2px;
+      background-color: #ffffff;
+      width: 70%;
+      margin: 20px auto;
+    }
+
+    .p-ops {
+      padding-top: 20px;
+      font-size: 15px;
+      opacity: 0.7;
+    }
+
+    .footer {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 70px;
+      justify-content: space-between;
+      background-color: #374826;
+      padding: 10px 20px;
+      color: white;
+    }
+
+    .footer-left .logo {
+      font-size: 32px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #fffacd;
+    }
+
+    .footer-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .h3 {
+      color: white;
+    }
+
+    .footer-text .h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .footer-text p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: #ddd;
+    }
+
+    .footer-middle h4,
+    .footer-right h4 {
+      font-size: 18px;
+      margin-bottom: 15px;
+    }
+
+    .footer-middle ul,
+    .footer-right ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    .footer-middle ul li,
+    .footer-right ul li {
+      margin-bottom: 10px;
+    }
+
+    .footer-middle ul li a {
+      color: #fff;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-middle ul li a:hover {
+      color: #a6d785;
+    }
+
+    #contact p.copyright {
+      text-align: center;
+      color: #f7f7f7;
+      font-size: 12px;
+      padding: 10px;
+      background-color: #6b7c60;
     }
   </style>
 </head>
 
 <body>
   <nav>
-    <div class="logo"><img src="lm.png"></div>
-    <div>
-      <a href="#home">Home</a>
-      <a href="#about">About the drink</a>
-      <a href="#">Benefits</a>
-      <a href="#">Where to buy</a>
+    <div class="logo">
+      MATCHA
     </div>
+    <div class="iteams">
+      <a href="#home">home</a>
+      <a href="#about">about</a>
+      <a href="#buy">buy</a>
+      <a href="#make">make</a>
+      <a href="#contact">contact</a>
+    </div>
+    <button type="button" class="but-n">sign up</button>
   </nav>
-  <div id="home">
-    <div class="home-main">
+  <div class="center" id="home">
+    <div class="center-text">
+      <p style="font-size: 15px;">100% japanese matcha</p>
+      <h1>MATCHA</h1>
+      <p>Discover the Japanese energy ritual</p>
+      <p class="p-ops">Matcha is a Japanese green tea in powder form with a mild, fresh taste. It provides energy and
+        vigour without
+        sudden spikes, and is rich in antioxidants for good health.</p>
+      <div class="center-cards">
+        <div class="card-center">
+          <div class="сenter-card-text">
+            <p>trusted by</p>
+            <h2 class="h2">1,900+</h2>
+          </div>
+        </div>
+        <div class="card-center">
+          <div class="сenter-card-text">
+            <p>explore</p>
+            <h2 class="h2">8,000+</h2>
+          </div>
+        </div>
+        <div class="card-center">
+          <div class="сenter-card-text">
+            <p>rated</p>
+            <h2>4,9 &#9733;</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="center-img">
+      <img src="phoroma.jpg" alt="">
+
+    </div>
+
+  </div>
+  <br>
+  <div id="about" class="back">
+    <div class="about-text">
+      <h1 class="h1">Why us?</h1>
+    </div>
+    <div class="content">
       <div class="text">
-        <h2>Matcha</h2>
-        <p></p>
+        <div class="text-style">
+          <h3>High-quality ingredients</h3>
+          <p>Our matcha is made only from selected tea leaves grown in ecologically clean regions. </p>
+        </div>
+        <div class="text-style">
+          <h3>Good for your health</h3>
+          <p>Matcha is rich in antioxidants, vitamins and minerals that help maintain energy, improve concentration and
+            strengthen the immune system.</p>
+        </div>
+        <div class="text-style">
+          <h3>Pure & Natural</h3>
+          <p>We use only natural ingredients, with no artificial additives, preservatives, or excess sugar. You get the
+            pure, clean taste of matcha in every sip.</p>
+        </div>
       </div>
-      <img src="phoroma.jpg">
-
+      <div class="img-content">
+        <img src="matcha.jpg" class="img-content">
+      </div>
+      <div class="text">
+        <div class="text-style">
+          <h3>Convenient & Easy </h3>
+          <p>Whether in powder form or ready-to-drink, our matcha is designed for modern life. Enjoy a nourishing cup at
+            home, at work, or on the go.</p>
+        </div>
+        <div class="text-style">
+          <h3>A Daily Ritual</h3>
+          <p>Drinking matcha isn’t just a beverage, it’s a mindful ritual. Take a moment to relax, recharge, and enjoy
+            the calming yet energizing effects of this ancient drink.</p>
+        </div>
+        <div class="text-style">
+          <h3>Trusted & Verified</h3>
+          <p>We carefully control every step of production, from farm to cup, so you can trust that every serving of our
+            matcha meets the highest standards of quality and freshness.</p>
+        </div>
+      </div>
     </div>
   </div>
-  <div id="about">
-    <div class="a-card">
-      <h2>Польза матчи</h2>
-      <div class="card">
-        <h4>1. Мощный источник антиоксидантов</h4>
-        <p>Матча содержит в разы больше антиоксидантов, чем обычный зелёный чай. Катехины защищают клетки, замедляют
-          процессы старения и поддерживают общее здоровье организма.</p>
+  <div id="buy">
+    <div>
+      <h1 class="h1">Favorite Drinks</h1>
+    </div>
+    <div class="buy">
+      <div class="buy-card">
+        <img src="mat1.png" class="b-img">
+        <div class="b-text">
+          <p>Matcha with milk</p>
+          <p class="p-op">A classic drink made from Japanese matcha powder and delicate milk. Light, rich
+            and perfect for a morning
+            energy boost.</p>
+          <hr>
+          <div class="bb">BUY</div>
+        </div>
       </div>
-      <div class="card">
-        <h4>2. Чистая и стабильная энергия</h4>
-        <p>Сочетание кофеина и L-теанина даёт мягкое, ровное бодрящее действие — без резких скачков, как после кофе.
-          Вы остаётесь сосредоточенными и спокойными одновременно.</p>
+      <div class="buy-card">
+        <img src="m2.png" class="b-img">
+        <div class="b-text">
+          <p>Matcha with strawberries</p>
+          <p class="p-op">A combination of fresh sweet strawberries and matcha. A bright, fruity flavour with the mild
+            bitterness of green tea.</p>
+          <hr>
+          <div class="bb">BUY</div>
+        </div>
       </div>
-      <div class="card">
-        <h4>3. Поддержка метаболизма</h4>
-        <p>Матча помогает ускорить обмен веществ, улучшает превращение энергии и может способствовать более
-          эффективному сжиганию калорий.</p>
+      <div class="buy-card">
+        <img src="m3.png" class="b-img">
+        <div class="b-text">
+          <p>Matcha + coffee (Matchafino) </p>
+          <p class="p-op">The perfect combination of invigorating espresso and mild matcha. An energy boost and a
+            delicious balance of coffee and tea.</p>
+          <hr>
+          <div class="bb">BUY</div>
+        </div>
+      </div>
+      <div class="buy-card">
+        <img src="m4.png" class="b-img">
+        <div class="b-text">
+          <p>Iced Matcha Latte</p>
+          <p class="p-op">A refreshing cold drink with matcha and milk. Perfect for a hot day, with the mild sweetness
+            and slight bitterness of matcha.</p>
+          <hr>
+          <div class="bb">BUY</div>
+        </div>
+      </div>
+      <div class="buy-card">
+        <img src="m5.png" class="b-img">
+        <div class="b-text">
+          <p>Matcha Orange</p>
+          <p class="p-op">A vitamin explosion! A combination of the citrus freshness of orange and matcha for energy and
+            good mood.</p>
+          <hr>
+          <div class="bb">BUY</div>
+        </div>
+      </div>
+      <div class="buy-card">
+        <img src="m6.png" class="b-img">
+        <div class="b-text">
+          <p>Matcha Milkshake</p>
+          <p class="p-op">A sweet and creamy cocktail based on matcha and milk. A drink that quenches your thirst and
+            gives you pleasure at the same time.</p>
+          <hr>
+          <div class="bb">BUY</div>
+        </div>
       </div>
     </div>
+    <div class="buy-end-container">
+      <div class="bb-end">More..</div>
+    </div>
   </div>
-
+  <div id="make">
+    <div class="text-sec">
+      <h1 class="h1">How To Make It?</h1>
+      <p>5 simple steps to enjoy of hot matcha</p>
+    </div>
+    <div class="second-slide">
+      <img src="first.png" class="second-img">
+      <img src="sec.png" class="second-img">
+      <img src="th.png" class="second-img">
+      <img src="for.png" class="second-img">
+      <img src="last.png" class="second-img">
+    </div>
+    <hr>
+  </div>
+  <div id="contact">
+    <div class="footer">
+      <div class="footer-left">
+        <div class="logo">MATCHA</div>
+        <div class="footer-text">
+          <h3 class="h3">Contact us and place your order now!</h3>
+          <p>Want to enjoy fresh and delicious matcha?</p>
+          <p>Write to us or call us, and we will process your order quickly
+            and conveniently.</p>
+        </div>
+      </div>
+      <div class="footer-middle">
+        <h4>Site Map</h4>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#make">Make</a></li>
+          <li><a href="#buy">Buy</a></li>
+          <li><a href="#contact">Contacts</a></li>
+        </ul>
+      </div>
+      <div class="footer-right">
+        <h4>Legacy</h4>
+        <ul>
+          <li>Privacy Policy</li>
+          <li>Terms of Service</li>
+          <li>FAQ</li>
+        </ul>
+      </div>
+    </div>
+    <p class="copyright">
+      &copy; 2025 MATCHA. All rights reserved.
+    </p>
+  </div>
 </body>
 
 </html>
